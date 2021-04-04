@@ -13,4 +13,10 @@ export class Fruit {
 
   @Column('float')
   weight: number;
+
+  @Column({name: 'created_at'})
+  createdAt: Date;
+
+  @Column({name: 'updated_at'})
+  updatedAt: Date;
 }
