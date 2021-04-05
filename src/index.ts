@@ -4,7 +4,7 @@ import { createConnection } from "typeorm";
 import app from "./App";
 
 
-const port = process.env.PORT || 8888;
+const port = process.env.PORT || 3000;
  
 /* Inicia o servidor */
 createConnection().then(() => 
