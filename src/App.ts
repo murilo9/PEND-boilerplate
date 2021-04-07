@@ -5,20 +5,14 @@ import FruitRoutes from "./routes/FruitRoutes";
 
 class App {
   public app: express.Application;
-  //Declara todos os grupos de rotas:
+  //Declares all routes groups:
   public fruitRoutes: FruitRoutes = new FruitRoutes();
 
   constructor() {
     this.app = express();
     this.config();
-    //Carrega todos os grupos de rotas:
+    //Loads all routes groups:
     this.fruitRoutes.routes(this.app);
-    /*this.loginRoutes.routes(this.app, verifyJWT);
-    this.postsRoutes.routes(this.app, verifyJWT);
-    this.commentRoutes.routes(this.app, verifyJWT);
-    this.notificationRules.routes(this.app, verifyJWT);*/
-    //inicializa o banco de dados:
-    //mongoose.connect(mongodbString, {useNewUrlParser: true});
   }
 
   private config(): void{
