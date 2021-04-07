@@ -1,7 +1,7 @@
-import {Entity, PrimaryGeneratedColumn, Column} from "typeorm";
+import { Entity, PrimaryGeneratedColumn, Column } from 'typeorm';
 
 @Entity()
-export class Fruit {
+export default class Fruit {
   @PrimaryGeneratedColumn('uuid')
   id: number;
 
@@ -14,9 +14,9 @@ export class Fruit {
   @Column('float')
   weight: number;
 
-  @Column({name: 'created_at'})
+  @Column({ name: 'created_at' })
   createdAt: Date;
 
-  @Column({name: 'updated_at'})
+  @Column({ name: 'updated_at' })
   updatedAt: Date;
 }
